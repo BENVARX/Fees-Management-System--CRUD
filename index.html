@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+    <style>
+        /* Embedded CSS */
+        .box{
+            position:absolute;
+            top: 50%;
+            left:40%;
+        }
+        .btn {
+            
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Some padding */
+            text-align: center; /* Center the text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Get the element to line up correctly */
+            font-size: 16px; /* Increase font size */
+            margin: 4px 2px; /* Some margin */
+            cursor: pointer; /* Pointer/hand icon */
+            border-radius: 12px; /* Rounded corners */
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* Darker green background on hover */
+        }
+    </style>
+</head>
+<body> 
+    <center>
+    <div class="box">
+    <button class="btn" onclick="redirectToPage()">View Fees Management System</button>
+    </div>
+</center>
+    <script>
+        // JavaScript function
+        function redirectToPage() {
+            window.location.href = "Home Page.html"; // Change to the desired URL
+        }
+    </script>
+
+</body>
+</html>

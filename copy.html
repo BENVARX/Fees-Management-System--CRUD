@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Details</title>
+</head>
+<body>
+
+    <h2>Fee Details</h2>
+
+    <form action="process_fee.php" method="post">
+        <label for="rollno">Enter Roll No:</label>
+        <input type="text" name="rollno" id="rollno" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <?php
+    // Display fee details here after form submission
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Assuming you have a database connection established
+        $servername = "your_servername";
+        $username = "your_username";
+        $password = "your_password";
+        $dbname = "your_dbname";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Fetch fee details based on the entered rollno
+        $rollno = $_POST["rollno"];
+        $query = "SELECT admission_fee, tution_fee FROM feesntries WHERE rollno = '$rollno'";
+        $result = $conn->query($query);
+
+        if ($result->num_rows > 0) {
+            // Display fee details
+            $row = $result->fetch_assoc();
+            $admission_fee = $row["admission_fee"];
+            $tution_fee = $row["tution_fee"];
+
+            echo "<br><br>";
+            echo "<label>Admission Fee:</label> <input type='text' value='$admission_fee' readonly>";
+            echo "<br><br>";
+            echo "<label>Tution Fee:</label> <input type='text' value='$tution_fee' readonly>";
+        } else {
+            echo "<br><br>";
+            echo "No records found for the entered rollno.";
+        }
+
+        // Close connection
+        $conn->close();
+    }
+    ?>
+
+</body>
+</html>

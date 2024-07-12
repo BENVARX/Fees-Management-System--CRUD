@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family:poppins;
+
+}
+.checklist{
+            position:absolute;
+            left:300px;
+            width:450px;
+            height:275px;
+            color: #ffff;
+    
+              position: absolute;
+              top:40%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+             border-radius: 60px;
+    padding: 40px 25px;
+    background:linear-gradient(to top,rgba(0, 0, 0, 0.9)50%,rgba(0,0,0,0.9)50%);
+    background-position: center;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-size: 120%;
+    
+            
+        }.form{
+            position:absolute;
+         
+            top:505px;
+            left:25%;
+            font-size: larger;
+            
+        }
+
+    </style>
+ 
+<body> 
+    
+    <center>
+    <h2>Semester Updation Page</h2>
+    <h4 style=" position:absolute;top:40px; left: 33%; color: red;">NOTE:ONCE SEMESTER UPDATED PAGE CANNOT BE EDITED OR UPDATED</h4>
+    </center>
+    <div class="checklist">
+        <form action="tfee4.php" method="post">
+    <ol>
+        <li><input type="checkbox" id="db_connection" name="db_connection" required> <label for="db_connection">Choose the current year that you intend to update. </label></li>
+        <li><input type="checkbox" id="form_data_retrieval" name="form_data_retrieval" required> <label for="form_data_retrieval">Give correct department which department you want to update the sem</label></li>
+        <li><input type="checkbox" id="current_year_limitation" name="current_year_limitation" required> <label for="current_year_limitation">
+            It increments the semester count by 1, then checks if the semester is odd, updating the current year and fees accordingly if it is. </label></li>
+        <li><input type="checkbox" id="semester_increment_update" name="semester_increment_update" required> <label for="semester_increment_update">if semester become 3,5,7 it automatically update the fees </label></li>
+        <li><input type="checkbox" id="year_update_semester" name="year_update_semester" required> <label for="year_update_semester">Year Update based on semester</label></li>
+       
+        <li><input type="checkbox" id="query_execution_error_handling" name="query_execution_error_handling" required> <label for="query_execution_error_handling">During page update, if current year is 1 and semester is 2, it switches to current year 2 and semester 3.</label></li>
+      </ol>
+    </div>
+    
+        <div class="form">
+            <center>
+    
+        <label for="current_year" style="font-family: poppins;">Current Year:</label>
+        <input type="text" name="current_year" style=" border-radius: 15px;border:2px solid black;padding: 3.5px;" required>
+
+        <label for="department_name">Department Name:</label>
+        <input type="text" name="department_name"  style=" border-radius: 15px;border:2px solid black;padding: 3.5px;" required>
+
+        <input type="submit" value="Submit" style="background-color: black; color: white; height:30px; width:130px; border-radius: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    </form>
+    <div class="home">
+        <a href = "Home Page.html">
+            <button type="button" name="Back1" value="Back1" style="color: white; background-color: black; height: 30px; width: 100px; padding: 0px 0px 0px 0px;border-radius:10px;border:2px solid black;">HOME</button>
+        </a></div>
+    </center>
+</div>
+    </body>
+    
+</body>
+</html>

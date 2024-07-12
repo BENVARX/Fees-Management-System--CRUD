@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firstpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        .box{
+            position: absolute;
+            bottom: 15px; 
+            left: 15px;
+            right: 15px;
+            top: 100px;
+            border-radius: 5px 5px 10px 10px;
+            background-color: black;
+        }
+
+        .Menu{
+            position: absolute;
+            left: 300px;
+            right: 300px;
+            top: 38px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+
+        .M1,.M2,.M3,.M4,.M5,.M6{
+            border-bottom: 0px solid black;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-bottom 0.20s,font-size 0.20s;
+        }
+
+        .M1:hover,.M2:hover,.M3:hover,.M4:hover,.M5:hover,.M6:hover{
+            border-bottom: 1.5px solid black;
+            font-size: 18px;
+            transition: font-size 0.10;
+        }
+        .M1:active,.M2:active,.M3:active,.M4:active,.M5:active,.M6:active{
+            font-size: 16px;
+        }
+        .B_LogOut{
+            position: absolute;
+            top: 38px;
+            right: 50px;
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 75px;
+            height: 28px;
+            font-family: 'Poppins', sans-serif;
+            transition: box-shadow 0.20s;
+
+        }
+        .B_LogOut:hover{
+            box-shadow: 0px 0px 15px black;
+        }
+        .B_LogOut:active{
+            background-color: white;
+            color: black;
+        }
+        .Heading1{
+            position:absolute;
+            top: 26px;
+            left: 30px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: black;
+        }
+        .Heading2{
+            position: absolute;
+            top: 26px;
+            left: 56px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            background-color: rgb(255, 149, 0);
+            border-radius: 5px;
+            width: 55px;
+            text-align: center;
+        }
+
+        .CollageI{
+            width: 1460px;
+            height: 629px;
+            border-radius:5px 5px 15px 15px;
+            filter: blur(3px);
+        }
+
+        .DAbout{
+            font-family: 'Poppins', sans-serif;
+            font-size: 40px;
+            position: absolute;
+            left: 416px;
+            top: 300px;
+            color: white;
+            text-shadow: 0px 0px 10px black;
+
+        }
+
+        .About2{
+            text-shadow: none;
+            position: absolute;
+            top: 20px;
+            left: 470px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            width: 80px;
+            height: 38px;
+            text-align: left;
+            padding-left: 8px;
+            font-size: 30px;
+            padding-top: opx;
+            padding-bottom: 4px;
+        }
+
+        .About3{
+            text-shadow: none;
+            position: absolute;
+            top: 20px;
+            left: 523px;
+            color: white;
+            background-color: rgb(255, 149, 0);
+            border-radius: 10px;
+            font-size: 30px;
+            width: 100px;
+            height: 38px;
+            text-align: center;
+            padding-top: opx;
+            padding-bottom: 4px;
+        }
+
+        .Slogan{
+            position: absolute;
+            top: 80px;
+            left: 190px;
+            font-size: 30px;
+        }
+
+        .DLearnMore{
+            position:absolute;
+            left: 250px;
+            top: 160px;
+        }
+
+        .LearnMore{
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            height: 28px;
+            width: 100px;
+            border: 1.8px solid rgba(255, 255, 255, 0.907);
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            transition: box-shadow 0.20s;
+
+        }
+
+        .LearnMore:hover{
+            box-shadow: 0px 0px 15px rgb(255, 255, 255);
+        }
+        .LearnMore:active{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div><p class = "Heading1">PIE</p><p class = "Heading2">VALUT</p></div>
+    <div class="Menu">
+    <div><a href = "men.html" class = "M1">New Entry</a></div>
+    <div><a href = "entryindex.html" class = "M2">Open Ledger</a></div>
+    <div><a href = "feesalteration.php" class = "M3">Fees Update</a></div>
+    <div><a href = "feeinfo.html" class = "M4">Fees Info</a></div>
+    <div><a href = "feesdisp.html" class = "M5">Payment</a></div>
+    <div><a href = "entryindex1.html" class = "M6">Report</a></div>
+    <div><a href = "class.html" class = "M6">Sem Update</a></div>
+    </div>
+    <button class = "B_LogOut" href = "#">Log Out</button>
+    <div class ="box"><img class = "CollageI" src = "Collage.jpg"></div>
+    <div class = "DAbout">
+    <div><p class = "About1">Create Database Using</p><b><p class = "About2">PIE</p><p class = "About3">VALUT</p></b><br><p class = "Slogan">Sky is the limit</p></div>
+    <div class = "DLearnMore"><button class = "LearnMore" herf = "#">Learn more</button></div>
+    </div>
+
+
+</body>
+</html>

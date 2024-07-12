@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Entry Page</title><meta charset="utf-8">
+    <link rel="stylesheet" href="menu.css">
+ <style>
+    
+        /* Internal CSS */
+     
+
+     #screen {
+     width: 100%;
+     height:100%;
+     background-color:white;
+     font-family: Roboto;
+     }
+ body{
+    font-family: Poppins;
+    margin: 0%;
+    padding: 0%;
+ }.phonenumber{
+    position:absolute;
+    top:560px;
+    left:655px;
+}
+     #menu {
+     width: 225px;
+     height: 100%;
+     position: fixed;
+     left: 0;
+     top: 0;
+     background-color: #070707;
+      box-shadow: 0 0 10px rgb(248, 246, 246);
+     border-top-right-radius: 40px;
+     border-bottom-right-radius: 40px;
+     } 
+
+     #menu ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     }
+
+     #menu li {
+     padding: 10px;
+     cursor:pointer;
+     color: rgb(247, 244, 244);
+     transition: color 0.2s;
+     font-family: poppins;
+     font-weight: none;
+     font-size: large;
+     }
+
+     #menu a {
+       text-decoration: none;
+       color: rgb(250, 247, 247);
+       font-family: 'poppins', sans-serif;
+  
+     }
+  
+        #menu a:hover {
+     text-decoration: underline;
+      color: #fefefe;
+     }
+
+
+     #logout:hover {
+      background-color: #030303;
+      }
+     #body {
+            font-family: 'poppins', sans-serif;
+        }
+
+        #new-entry-form {
+            position: inherit;
+            width: 800px;
+            margin-left:300px;
+        }
+
+        label {
+            display: inherit;
+            margin-bottom: 10px;
+            
+        }
+
+        #input,
+        select {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            user-select:none;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+        #submit,button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f0f3f4;
+            color: rgb(10, 10, 10);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+        }#log label{
+            
+        }
+    
+            
+
+    
+    </style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="menu">
+        <ul>
+          <li><a href="Home Page.html"><h4>HOME</h4></a></li>
+          <li><a href="entryindex.html">Open Ledger</a></li>
+          <li><a href="feesalteration.php">Fees Alteration</a></li>
+          <li><a href="entryindex1.html">fees info</a></li>
+          <li><a href="feesdisp.html">Payment</a></li>
+          <li><a href="#">Report</a></li>
+        </ul>
+      </div>
+   </div>
+ 
+ 
+<div id="new-entry-form">
+        <form action="connect.php" method="post" autocomplete="off">
+            <h1 style="font-family: 'Roboto', sans-serif;">WELCOME TO PIETECH FAMILY 👨‍🎓</h1>
+           <div class="first_name">
+            <label for="first_name"style="font-family: 'poppins', sans-serif;font-size:20px;" >First Name</label>
+            <input type="text" name="first_name" id="first_name"placeholder="Enter firstname" autocomplete="off" style="border-radius:15px;border:2px solid black;width: 226px;height: 30px;" required>
+           </div>
+           <div class="last_name">
+            <label for="last_name" style="font-family: 'poppins', sans-serif;font-size:20px;">Last Name</label>
+            <input type="text" name="last_name" id="last_name"placeholder="Enter lastname" autocomplete="off" style="border-radius:15px;border:2px solid black;left: 200px;width: 226px;height: 30px;" required>
+           </div>
+           <div class="rollno">
+            <label for="rollno" style="font-family: 'poppins', sans-serif;font-size:20px; ">Rollno</label>
+            <input type="text" name="rollno" id="rollno"placeholder="Enter roll no" pattern="[0-9[a-zA-Z]{2}[0-9]{3}" title="Please enter a valid roll number like 21cs009" autocomplete="off" style="border-radius:15px;border:2px solid black;width: 226px;height: 30px; user-select: none; " required>
+           </div>       
+          
+           <div class="category">
+            <label for="category" name="category"style="font-family: 'poppins', sans-serif;font-size:20px;">Category</label>
+            <select name="category" id="category"style="border-radius:15px;border:2px solid black"  required>
+                <option value="">Select category</option>
+                <option value="GQ">GQ</option>
+                <option value="MQ">MQ</option>
+                <option value="PMSS">PMSS</option>
+                <option value="GQ(FG)">GQ(FG)</option>
+                <option value="7.5">7.5</option>
+            </select>
+            
+           </div>           
+            <div class="department_name">
+            <label for="department_name" name="department_name"style="font-family: 'poppins', sans-serif;font-size:20px;">Department Name</label>
+            <select name="department_name" id="department_name"style="border-radius:15px;border:2px solid black"  required>
+                <option value="">Select Dept</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="MECH">MECH</option>
+                <option value="AI&DS">AI&DS</option>
+                <option value="EEE">EEE</option>
+                <option value="CIVIL">CIVIL</option>
+            </select>
+            </div>
+            <div class="current_year">
+            <label for="current_year" name="current_year" style="font-family: 'poppins', sans-serif;font-size:20px;">Current Year</label>
+            <select name="current_year" id="current_year"style="border-radius:15px;border:2px solid black" required>
+                <option value="">Select Year</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            </div>
+            <div class="batch">
+            <label for="batch" name="batch" style="font-family: 'poppins', sans-serif;font-size:20px;">Batch</label>
+            <select name="batch"  id="batch"style="border-radius:15px;border:2px solid black" required>
+                <option value="">Select Batch</option>
+                <option value="2015-2019">2015-2019</option>
+                <option value="2016-2020">2016-2020</option>
+                <option value="2017-2021">2017-2021</option>
+                <option value="2018-2022">2018-2022</option>
+                <option value="2019-2023">2019-2023</option>
+                <option value="2020-2024">2020-2024</option>
+                <option value="2021-2025">2021-2025</option>
+                <option value="2022-2026">2022-2026</option>
+                <option value="2023-2027">2023-2027</option>
+                <option value="2024-2028">2024-2028</option>
+                <option value="2025-2029">2025-2029</option>
+                <option value="2026-2030">2026-2030</option>
+                <option value="2027-2031">2027-2031</option>
+                <option value="2028-2032">2028-2032</option>
+                <option value="2029-2033">2029-2033</option>
+                <option value="2030-2034">2030-2034</option>
+                <option value="2031-2035">2031-2035</option>
+                <option value="2032-2036">2032-2036</option>
+                <option value="2033-2037">2033-2037</option>
+                <option value="2034-2038">2034-2038</option>
+                <option value="2035-2039">2035-2039</option>
+                <option value="2036-2040">2036-2040</option>
+                <option value="2037-2041">2037-2041</option>
+                <option value="2038-2042">2038-2042</option>
+                <option value="2039-2043">2039-2043</option>
+                <option value="2040-2044">2040-2044</option>
+                <option value="2041-2045">2041-2045</option>
+                <option value="2042-2046">2042-2046</option>
+                <option value="2043-2047">2043-2047</option>
+                <option value="2044-2048">2044-2048</option>
+                <option value="2045-2049">2045-2049</option>
+                <option value="2046-2050">2046-2050</option>
+                <option value="2047-2051">2047-2051</option>
+                <option value="2048-2052">2048-2052</option>
+                <option value="2049-2053">2049-2053</option>
+                <option value="2050-2054">2050-2054</option>
+            </select>
+            </div>
+            <div class="current_semester">
+            <label for="current_semester" name="current_semester" style="font-family: 'poppins', sans-serif;font-size:20px;" required>Current Semester</label>
+            <select name="current_semester" id="current_semester"style="border-radius:15px;border:2px solid black"required>
+                <option value="">Select Sem</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            </div>  <div class="phonenumber">
+                <label for="phonenumber" name="phonenumber"style="font-family: 'poppins', sans-serif;font-size:20px;">Phonenumber</label>
+                <input type="tel" name="phonenumber" id="phonenumber"placeholder="Enter phone number"   minlength="10" maxlength="10" autocomplete="off" style="border-radius:15px;border:2px solid black;width: 226px;height: 30px; " required>
+            </div>
+            <div class="checkbox">
+            <input type="checkbox" name="agree" id="agree" required> please check the above given data are correct or not ,if it correct tick the checkbox .</input>
+            
+            <button style="background-color: #000000;border-radius: 20px; color:white;">Submit</button> 
+             </div>
+             <div class="email">
+                <label for="email" style="font-size: 20px; font-family: 'poppins', sans-serif;">Email</label>
+                <input type="email" name="email" class="box2" placeholder="Enter email" name="email" autocomplete="off" style="height:30px; width: 226px; border-radius: 15px; border:2px solid black;" required>
+             </div>
+             <div class="Address">
+                <label for="rollno" style="font-family: 'poppins', sans-serif;font-size:20px;">Address</label>
+                <input type="text" name="Addreess" id="Addreess"placeholder="Enter Address" autocomplete="off" style="border-radius:15px;border:2px solid black;width: 226px;height: 30px; " required>
+            </div>
+               <div class="Regno">
+                <label for="registernumber" style="font-family: 'poppins', sans-serif;font-size:20px;">Register Number</label>
+                <input type="text" name="registernumber" id="registernumber"placeholder="Enter register number"   minlength="12" maxlength="12" autocomplete="off" style="border-radius:15px;border:2px solid black;width: 226px;height: 30px; " required>
+             </div>  
+           
+        </form>
+    </div>
+
+   <div class="logout">
+    <button style="background-color: #000000;border-radius: 5px; color:white;"><a href="" style="color: white;text-decoration: none;">Logout</a></button> 
+   </div> 
+<script>
+    document.getElementById('rollno').addEventListener('blur', function () {
+        var rollno = this.value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(this.responseText);
+                if (response.exists) {
+                    document.getElementById('rollno').classList.add('error');
+                    document.getElementById('rollno_error').textContent = "Roll Number already exists!";
+                    alert("rollno already exist");
+                } else {
+                    document.getElementById('rollno').classList.remove('error');
+                    document.getElementById('rollno_error').textContent = "";
+                }
+            }
+        };
+        xhttp.open("GET", "check_rollno.php?rollno=" + rollno, true);
+        xhttp.send();
+    });
+</script>
+
+
+
+
+
+
+<script>
+    window.onload = function() {
+      var form = document.getElementById('myForm');
+      form.reset(); // Reset the form when the page loads
+      
+      // Disable autofill for each input field
+      var inputs = document.getElementsByTagName('input');
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].setAttribute('autocomplete', 'off');
+      }
+    }
+  </script>
+  
+  <script type="text/javascript">
+    window.onload = function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var alertType = urlParams.get('alert');
+        
+        if (alertType === 'exists') {
+            alert("Roll number already exists!");
+        } else if (alertType === 'success') {
+            alert("New entry created successfully!");
+        }
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>

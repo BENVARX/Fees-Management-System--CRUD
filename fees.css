@@ -1,0 +1,45 @@
+.studentname1{
+    position: absolute;
+    left:350px;
+    top:75px;
+    margin:0%;
+    padding:0%;
+    
+}.date{
+    position:absolute;
+    left:1000px;
+    top:75px;
+}
+.fee1{
+    position:absolute;
+    left:350px;
+}.tableborder{
+    position:absolute;
+    top: 200px;
+    left:400px;
+    height: 0px;
+    width: 500px;
+    
+}.total{
+    position:absolute;
+    left:790px;
+    top:558px;
+}.totalbutton{
+    position: absolute;
+    left:890px;
+    top:558px;
+
+}.proceedtonextpage{
+    position: absolute;
+    left:790px;
+    top:600px;
+
+}.reset{
+    position: absolute;
+    left:350px;
+    top:555px;
+}.feetable,.rollno{
+    left: 800px;
+    right: 400px;
+
+}
